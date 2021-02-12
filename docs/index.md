@@ -4,10 +4,6 @@ You can use the [editor on GitHub](https://github.com/chetankamadinni/spring-boo
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
 ```markdown
 # spring-boot-redis-docker-demo
 Demo of Spring boot app( docker container) connecting to redis(docker container)
@@ -19,6 +15,7 @@ Create a spring-boot app with `spring-boot-starter-web`, `spring-boot-starter-da
 **Jedis** is the java client used to connect to redis instance.
 
 Add the below properties to application.properties file
+
 ```
 server.port=8085
 spring.redis.host=redis
@@ -42,21 +39,21 @@ public RedisTemplate<String, Object> redisTemplate(){
 	redisTemplate.setValueSerializer(new GenericToStringSerializer<Object>(Object.class));
 	return redisTemplate;
 }
- ```
+```
  Use this redisTemplate to do all the hashOperations like put, get etc
  
  ## Step2 Create a Dockerfile for spring-boot-app
  Create a Dockerfile as shown below
- ```
+```
 FROM openjdk:8
 ADD target/spring-boot-redis.jar spring-boot-redis.jar
 EXPOSE 8085
 ENTRYPOINT ["java", "-jar", "spring-boot-redis.jar"]
- ```
+```
  
  ## Step3 Create a docker-compose file
  Create a docker-compose.yml file as shown below. Here the app is binded to redis instance
- ```yml
+```yml
  version: '3'
 services:
   app:
