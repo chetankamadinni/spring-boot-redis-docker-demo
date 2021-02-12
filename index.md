@@ -1,3 +1,9 @@
+## Welcome to GitHub Pages
+
+You can use the [editor on GitHub](https://github.com/chetankamadinni/spring-boot-redis-docker-demo/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
 # spring-boot-redis-docker-demo
 Demo of Spring boot app( docker container) connecting to redis(docker container)
 
@@ -86,3 +92,13 @@ GET http://localhost:8085/api/employee/1000
 - `docker-compose up -d` (Detached)
 - `docker-compose down` (stop)
 - `docker-compose restart` (restart the services)
+
+
+
+### Jekyll Themes
+
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/chetankamadinni/spring-boot-redis-docker-demo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+
+### Support or Contact
+
+Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
